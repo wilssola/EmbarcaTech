@@ -82,7 +82,6 @@ void pico_sos() {
     pico_morse_dot();
     sleep_ms(LED_DELAY_MS);
     pico_morse_dot();
-
     sleep_ms(MORSE_REPEAT_MS);
 }
 
