@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 34.8,
+      "left": -149.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 139.2,
+      "left": -163.75,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "led1:C", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "pico:GND.4", "green", [ "h0" ] ],
+    [ "led1:A", "pico:GP13", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
